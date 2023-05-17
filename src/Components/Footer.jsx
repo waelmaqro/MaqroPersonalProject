@@ -1,6 +1,9 @@
 'use client'
 import React from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import { Dropdown } from 'flowbite-react';
 
 const Footer = () => {
   return (
@@ -70,13 +73,31 @@ const Footer = () => {
 
         <hr className="my-8 border-gray-700" />
 
+        <div className='flex justify-between'>
+          <div className=' bg-gray-700 py-2 px-4 rounded-md'>
+            <Dropdown label="English" inline={true}>
+              <Dropdown.Item className='min-w-[100px] flex justify-start'>
+                Other
+              </Dropdown.Item>
+            </Dropdown>
+          </div>
+
         <div className="text-center">
           <p className="text-sm">
            2023 Porche, Inc. · Privacy · Terms · Sitemap
           </p>
         </div>
+
+        <div className='flex justify-center items-center gap-1'>
+        <FacebookIcon/>
+        <LinkedInIcon />
+        <YouTubeIcon />
+        </div>
+        </div>
+
+
       </div>
-      <FacebookIcon/>
+     
     </footer>
   );
 };

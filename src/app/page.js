@@ -4,9 +4,9 @@ import Footer from "../components/Footer"
 
 export default function Home() {
   return (
-    <main className='py-[100px] h-screen'>
+    <main className='py-[100px] flex flex-col min-h-screen'>
       <Navbar />
-      <div className='flex flex-col text-center justify-center items-center gap-4 overflow-hidden'>
+      <div className='flex flex-col flex-grow text-center justify-center items-center gap-4 overflow-hidden'>
         <h1 className='heading text-3xl font-semibold'>
           Porche, full spectrum - full synergy.
         </h1>
