@@ -7,8 +7,8 @@ import { Dropdown } from 'flowbite-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white bottom-0">
-      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-800 text-white bottom-0 w-screen overflow-hidden">
+      <div className="container mx-auto py-8 px-4 xxs:px-2  sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Product Section */}
           <div>
@@ -53,13 +53,13 @@ const Footer = () => {
           </div>
 
           {/* Subscribe Section */}
-          <div>
+          <div className='max-w-screen'>
             <h2 className="text-lg font-semibold mb-4">Subscribe to our newsletter</h2>
-            <form className="flex">
+            <form className="flex  xxs:flex-col xxshalf:flex-row">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="py-2 px-4 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary bg-gray-200 flex-grow"
+                className="py-2 px-4 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary bg-gray-200 flex-grow max-w-full"
               />
               <button
                 type="submit"
@@ -73,7 +73,7 @@ const Footer = () => {
 
         <hr className="my-8 border-gray-700" />
 
-        <div className='flex justify-between'>
+        <div className='flex ss:flex-row xxs: xxs:gap-2 flex-col items-center  justify-between'>
           <div className=' bg-gray-700 py-2 px-4 rounded-md'>
             <Dropdown label="English" inline={true}>
               <Dropdown.Item className='min-w-[100px] flex justify-start'>
@@ -84,7 +84,7 @@ const Footer = () => {
 
         <div className="text-center">
           <p className="text-sm">
-           2023 Porche, Inc. · Privacy · Terms · Sitemap
+           2023 Porche Inc. · Privacy · Terms · Sitemap
           </p>
         </div>
 
