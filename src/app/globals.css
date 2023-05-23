@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#root,
+.app {background-color: rgb(156,123,255);
+  @apply text-black;
+} 
