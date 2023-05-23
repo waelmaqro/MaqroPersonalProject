@@ -1,10 +1,9 @@
-import { CarouselData } from "@/Components/ComponentData";
 import {
   Navbar,
   Footer,
   FeatureCard,
   TrustedByCompanies,
-} from "../components/Index";
+} from "../components/Index.jsx";
 import FlowCarousel from "@/Components/FlowCarousel";
 
 export default function Home() {
