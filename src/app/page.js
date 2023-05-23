@@ -1,6 +1,7 @@
 
 import FlowCarousel from "@/Components/FlowCarousel";
 import {Navbar, Footer, FeatureCard, TrustedByCompanies} from "../Components/Index";
+import PricingCards from "@/Components/PricingCards";
 
 export default function Home() {
   return (
@@ -63,6 +64,7 @@ export default function Home() {
       <section className="my-[100px]">
         <FlowCarousel />
       </section>
+      <PricingCards />
       <Footer />
     </main>
   );

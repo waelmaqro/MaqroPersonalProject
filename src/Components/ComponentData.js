@@ -20,3 +20,25 @@ export const CarouselData = [
  
 ];
 
+export const pricingData = [
+  {
+    title: 'Personal',
+    monthlyPrice: '10',
+    yearlyPrice: '100',
+    features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+  },
+  {
+    title: 'Startup',
+    monthlyPrice: '20',
+    yearlyPrice: '200',
+    features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+  },
+  {
+    title: 'Organization',
+    monthlyPrice: '30',
+    yearlyPrice: '300',
+    features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+  },
+
+]
+
