@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Carousel } from 'flowbite-react'
-import { CarouselData } from './CarouselData'
+import { CarouselData } from './ComponentData'
 import CustomMediaQuery from '@/app/Queries/CustomMediaQuery'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 

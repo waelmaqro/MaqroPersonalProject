@@ -1,4 +1,4 @@
-import { CarouselData } from "@/Components/CarouselData";
+import { CarouselData } from "@/Components/ComponentData";
 import {
   Navbar,
   Footer,
