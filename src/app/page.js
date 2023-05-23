@@ -1,10 +1,6 @@
-import {
-  Navbar,
-  Footer,
-  FeatureCard,
-  TrustedByCompanies,
-} from "../components/Index.jsx";
+
 import FlowCarousel from "@/Components/FlowCarousel";
+import {Navbar, Footer, FeatureCard, TrustedByCompanies} from "../Components/Index";
 
 export default function Home() {
   return (
