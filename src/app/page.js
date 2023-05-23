@@ -12,7 +12,7 @@ export default function Home() {
           Porche, full spectrum - full synergy.
         </h1>
         <h1 className=" xxs:w-full xxl:max-w-[50%] xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg opacity-80">
-          Experience luxury and performance like never before with Porche's
+          Experience luxury and performance like never before with Porche
           iconic lineup of precision-engineered vehicles.
         </h1>
 
@@ -45,14 +45,14 @@ export default function Home() {
         <FeatureCard
           title="Feature"
           imageUrl="/landingimage.jpg"
-          description=" Experience luxury and performance like never before with Porche's
+          description=" Experience luxury and performance like never before with Porche
               iconic lineup of precision-engineered vehicles."
               flipSwitch={false}
         />
          <FeatureCard
           title="Feature"
           imageUrl="/landingimage.jpg"
-          description=" Experience luxury and performance like never before with Porche's
+          description=" Experience luxury and performance like never before with Porche
               iconic lineup of precision-engineered vehicles."
               flipSwitch={true}
         />
