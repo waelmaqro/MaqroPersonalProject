@@ -2,16 +2,15 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Dropdown, HamburgerMenu } from "flowbite-react";
-import useMediaQuery from "./UseMediaQuery";
+import CustomMediaQuery from "../app/Queries/CustomMediaQuery";
 import { MenuRounded, CloseRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
-  const hamburgerMenu = useMediaQuery("(max-width: 1179px)");
+  const hamburgerMenu = CustomMediaQuery("(max-width: 1179px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
-
 
   const variants = {
     visible: { x: "0%" },
@@ -19,7 +18,7 @@ const Navbar = () => {
     exit: { x: "-100%" },
     exitActive: { x: 0 },
   };
-  
+
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY > 90) {
@@ -42,49 +41,65 @@ const Navbar = () => {
   return (
     <>
       {!hamburgerMenu ? (
-        <nav  style={{ backgroundColor: color, color: textColor, transition: "background-color 0.3s" }} className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-between items-center z-40 shadow-sm  `}>
-          <div className="min-w-[200px]">Logo</div>
+        <nav
+          style={{
+            backgroundColor: color,
+            color: textColor,
+            transition: "background-color 0.3s",
+          }}
+          className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-center items-center z-40 shadow-sm  `}
+        >
+          <div className=" flex justify-between w-full max-w-[1400px]">
+            <div className="min-w-[200px]">Logo</div>
 
-          <div className="flex justify-center items-center gap-4 ">
-            <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
-              <Dropdown label="Features" inline={true} className="w-[200px]">
-                <Dropdown.Item>Feature</Dropdown.Item>
-                <Dropdown.Item>Feature</Dropdown.Item>
-                <Dropdown.Item>Feature</Dropdown.Item>
-              </Dropdown>
+            <div className="flex justify-center items-center gap-4 ">
+              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+                <Dropdown label="Features" inline={true} className="w-[200px]">
+                  <Dropdown.Item>Feature</Dropdown.Item>
+                  <Dropdown.Item>Feature</Dropdown.Item>
+                  <Dropdown.Item>Feature</Dropdown.Item>
+                </Dropdown>
+              </div>
+              <Link href="/">
+                <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+                  Pricing
+                </div>
+              </Link>
+              <Link href="/">
+                <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+                  About us
+                </div>
+              </Link>
+              <Link href="/">
+                <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+                  Contact
+                </div>
+              </Link>
+              <Link href="/">
+                <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+                  Blog
+                </div>
+              </Link>
             </div>
-            <Link href="/">
-              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
-                Pricing
-              </div>
-            </Link>
-            <Link href="/">
-              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
-                About us
-              </div>
-            </Link>
-            <Link href="/">
-              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
-                Contact
-              </div>
-            </Link>
-            <Link href="/">
-              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
-                Blog
-              </div>
-            </Link>
-          </div>
-          <div className="flex items-center gap-4 min-w-[200px]">
-            <button className="bg-primary px-6 py-2 text-white rounded-sm">
-              Sign in
-            </button>
-            <button className="px-6 py-2 border-[2px] border-primary text-primary rounded-sm  ">
-              Sign up
-            </button>
+            <div className="flex items-center gap-4 min-w-[200px] opacity-90">
+              <button className="bg-primary px-6 py-2 text-white rounded-md min-w-[100px] opa">
+                Sign in
+              </button>
+              <button className="px-6 py-2  bg-gray-700 text-white rounded-md min-w-[100px]">
+                Sign up
+              </button>
+            </div>
           </div>
         </nav>
       ) : (
-        <nav className="fixed top-0 w-screen bg-gray-900  text-lg text-white  flex px-5 py-4  justify-between items-center z-40" style={{ backgroundColor: color, color: textColor, transition: "background-color 0.3s" }}>
+        <nav
+          className="fixed top-0 w-screen bg-gray-900  text-lg text-white  flex px-5 py-4  justify-between items-center z-40"
+          style={{
+            backgroundColor: color,
+            color: textColor,
+            transition: "background-color 0.3s",
+          }}
+        >
           <button
             className="rounded-full ml-5 mt-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}

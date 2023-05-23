@@ -1,7 +1,11 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import TrustedByCompanies from "@/Components/TrustedByCompanies";
-import FeatureSection from "@/Components/FeatureSection";
+import { CarouselData } from "@/Components/CarouselData";
+import {
+  Navbar,
+  Footer,
+  FeatureCard,
+  TrustedByCompanies,
+} from "../components/Index";
+import FlowCarousel from "@/Components/FlowCarousel";
 
 export default function Home() {
   return (
@@ -27,21 +31,43 @@ export default function Home() {
         </div>
       </section>
       <div className="flex w-screen justify-center items-center top-0 absolute z-0 ">
-          <img
-            src="/landingimage.jpg"
-            alt="Picture of the author"
-            className="w-screen h-screen object-cover opacity-70"
-          />
+        <img
+          src="/landingimage.jpg"
+          alt="Picture of the author"
+          className="w-screen h-screen object-cover opacity-70"
+        />
       </div>
-      {/* Trusted by */}
-      <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-10 ">
-      <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-semibold opacity-80">
+      {/* Trusted Section */}
+      <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-10 my-[100px]">
+        <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-semibold opacity-80">
           Trusted by
         </h2>
         <TrustedByCompanies />
-        <FeatureSection />
       </section>
-    
+
+      {/* Feature Section */}
+      <section className="my-[100px] flex flex-col gap-[100px]">
+        <FeatureCard
+          title="Feature"
+          imageUrl="/landingimage.jpg"
+          description=" Experience luxury and performance like never before with Porche's
+              iconic lineup of precision-engineered vehicles."
+              flipSwitch={false}
+        />
+         <FeatureCard
+          title="Feature"
+          imageUrl="/landingimage.jpg"
+          description=" Experience luxury and performance like never before with Porche's
+              iconic lineup of precision-engineered vehicles."
+              flipSwitch={true}
+        />
+       
+      </section>
+
+      {/* Carousel Section */}
+      <section className="my-[100px]">
+        <FlowCarousel />
+      </section>
       <Footer />
     </main>
   );
