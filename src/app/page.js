@@ -1,9 +1,11 @@
 
 import FlowCarousel from "@/Components/FlowCarousel";
-import {Navbar, Footer, FeatureCard, TrustedByCompanies} from "../Components/Index";
+import {Navbar, Footer, FeatureCard, TrustedByCompanies, GetStarted, BlogCard} from "../Components/Index";
 import PricingCards from "@/Components/PricingCards";
+import { BlogData } from "@/Components/ComponentData";
 
 export default function Home() {
+  
   return (
     <main className="pt-[100px] flex flex-col  bg-gray-800 ">
       <Navbar />
@@ -30,11 +32,14 @@ export default function Home() {
         <img
           src="/landingimage.jpg"
           alt="Picture of the author"
-          className="w-screen h-screen object-cover opacity-70"
+          className="w-screen h-screen object-cover opacity-70 fixed top-0"
         />
       </div>
       {/* Trusted Section */}
-      <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-10 my-[100px]">
+      <section className="z-[20] bg-gray-800 py-10">
+
+
+      <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-10 my-[100px] z-[20]">
         <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-semibold opacity-80">
           Trusted by
         </h2>
@@ -65,7 +70,17 @@ export default function Home() {
         <FlowCarousel />
       </section>
       <PricingCards />
+      <GetStarted header="Get started!" text="Maecenas ullamcorper ullamcorper est, in condimentum ex volutpat ut.
+            Quisque consequat imperdiet varius." button="Sign up" />
+       <div className="flex justify-center flex-row gap-8">
+       {BlogData.map ((data, index) => (
+        
+          <BlogCard key={index} imgSrc={data.imageSrc} authorName={data.author} blogTitle={data.text} duration={data.duration} date={data.date} />
+    
+       ))}    
+        </div>
       <Footer />
+      </section>
     </main>
   );
 }

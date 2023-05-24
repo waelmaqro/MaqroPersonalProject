@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Dropdown, HamburgerMenu } from "flowbite-react";
+import { Dropdown } from "flowbite-react";
 import CustomMediaQuery from "../app/Queries/CustomMediaQuery";
 import { MenuRounded, CloseRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
