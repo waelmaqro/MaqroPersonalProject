@@ -1,10 +1,11 @@
 import React from "react";
-import { Card } from "flowbite-react";
+
 
 const BlogCard = ({imgSrc, authorName, blogTitle, date, duration}) => {
   return (
-    <div className="flex justify-center items-center">
-      <div class="max-w-[500px] flex flex-col rounded-lg shadow bg-gray-700 border-gray-600 text-white  text-opacity-80 gap-2">
+    <div className="">
+    <div className=" xs:min-w-[350px] md:min-w-[280px] bg-gray-700 xxs:p-0 xs:p-6 rounded-md text-white opacity-80  ">
+      <div className="sm:grid sm:grid-cols-2 md:flex md:flex-col xxs:flex xxs:flex-col  ">
         <img src={imgSrc} />
         <div className="flex flex-col p-4">
         <h5 className="text-xl tracking-tight">
@@ -25,6 +26,8 @@ const BlogCard = ({imgSrc, authorName, blogTitle, date, duration}) => {
       
       </div>
     </div>
+
+</div>
   );
 };
 

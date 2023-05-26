@@ -50,7 +50,9 @@ const Navbar = () => {
           className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-center items-center z-40 shadow-sm  `}
         >
           <div className=" flex justify-between w-full max-w-[1400px]">
-            <div className="min-w-[200px]">Logo</div>
+            <div className="min-w-[200px]">
+              <img src="/porche.png" className="max-w-[50px]" />
+            </div>
 
             <div className="flex justify-center items-center gap-4 ">
               <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">

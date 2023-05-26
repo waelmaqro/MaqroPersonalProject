@@ -40,11 +40,11 @@ const PricingCards = () => {
       </div>
       
       {/* Card */}
-      <div className="grid xxs:grid-cols-1 md:grid-cols-3 gap-4 max-w-[90%] justify-center items-center">
+      <div className="grid xxs:grid-cols-1 md:grid-cols-3 gap-4  px-4 justify-center items-center xl:w-[80%] xxl:w-[1500px]">
         {PricingData.map((pricing, index) => (
           <div
             key={index}
-           className=" xs:min-w-[350px] md:min-w-[280px] lg:w-[350px] bg-gray-700 p-6 rounded-md text-white opacity-80 "
+           className=" xs:min-w-[350px] md:min-w-[280px] bg-gray-700 p-6 rounded-md text-white opacity-80 "
           >
             <div  className="xs:grid xs:grid-cols-2 md:flex md:flex-col xxs:flex xxs:flex-col  ">
             {/* div 1 */}
