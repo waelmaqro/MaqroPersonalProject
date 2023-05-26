@@ -24,10 +24,10 @@ const FeatureCard = ({title, imageUrl, description, flipSwitch}) => {
           {description}
         </h1>
         <div className="flex justify-start gap-2 opacity-100 sm:flex-row xxs:flex-col">
-          <button className="bg-primary px-8 py-3 text-white opacity-100 rounded-md min-w-[130px]">
+          <button className="bg-primary px-8 py-3 opacity-100 rounded-md min-w-[130px]">
             Try now
           </button>
-          <button className="px-8 py-3 bg-gray-700 text-white rounded-md min-w-[130px]">
+          <button className="px-8 py-3 bg-gray-700  rounded-md min-w-[130px]">
             Learn more
           </button>
         </div>
