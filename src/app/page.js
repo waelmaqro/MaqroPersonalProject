@@ -19,10 +19,10 @@ export default function Home() {
       
       {/* Hero section */}
       <section className="flex flex-col flex-grow text-center justify-center items-center gap-4 overflow-hidden z-10 text-white  h-screen font px-4">
-        <h1 className="heading xxl:text-7xl sm:text-5xl xs:text-3xl xxs:text-xl text font-semibold opacity-80">
+        <h1 className="heading xxl:text-6xl sm:text-4xl xs:text-3xl xxs:text-xl text font-semibold opacity-80">
           Porche, full spectrum - full synergy.
         </h1>
-        <h1 className=" xxs:w-full xxl:max-w-[50%] xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg opacity-80">
+        <h1 className=" xxs:w-full xxl:max-w-[1500px] xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg opacity-80">
           Experience luxury and performance like never before with Porche iconic
           lineup of precision-engineered vehicles.
         </h1>
@@ -40,7 +40,7 @@ export default function Home() {
         <img
           src="/landingimage.jpg"
           alt="Picture of the author"
-          className="w-screen h-screen object-cover opacity-70 fixed top-0"
+          className="w-screen h-screen object-cover opacity-70 fixed top-0 blur-sm"
         />
       </div>
 
@@ -57,7 +57,7 @@ export default function Home() {
         </section>
 
         {/* Feature Section */}
-        <section className="my-[100px] flex flex-col gap-[100px] justify-center items-center">
+        <section className="my-[200px] flex flex-col gap-[100px] justify-center items-center">
           <FeatureCard
             title="Feature"
             imageUrl="/landingimage.jpg"
@@ -80,12 +80,18 @@ export default function Home() {
         </section>
 
         {/* Pricing Cards Section */}
-        <section className="my-[100px]">
+        <section className="my-[100px] flex justify-center items-center flex-col gap-4 text-center">
+        <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-semibold opacity-80 text-white">
+            Pricing
+          </h2>
+          <p className="max-w-[70%] text-white  xxl:text-3xl sm:text-xl xs:text-lg xxs:text-md opacity-90 xxs:max-w-screen flex flex-col md:gap-4 xxs:gap-2 font-bold justify-center items-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          </p>
         <PricingCards />
         </section>
         
         {/* Get Started Section */}
-        <section className="my-[100px]">
+        <section className="my-[100px] flex justify-center">
         <GetStarted
           header="Get started!"
           text="Maecenas ullamcorper ullamcorper est, in condimentum ex volutpat ut.

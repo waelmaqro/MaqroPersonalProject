@@ -5,8 +5,8 @@ const FeatureCard = ({title, imageUrl, description, flipSwitch}) => {
     const textOrder = flipSwitch ? 'order-2' : 'lg:order-1';
   
   return (
-    <div className="xxs:w-screen lg:max-w-[50%] items-center flex flex-col gap-8 justify-center ">
-    <div className="grid lg:grid-cols-2 xxs:grid-cols-1 grid-cols-2 gap-8 px-4 items-center sm:max-w-[70%] xxs:max-w-[100%] text-white opacity-80">
+    <div className="xxs:w-full lg:max-w-[1500px] items-center flex flex-col gap-8 justify-center ">
+    <div className="grid lg:grid-cols-2 xxs:grid-cols-1 grid-cols-2 gap-8 px-4 items-center text-white opacity-80">
       {/* Image */}
       <div className={`flex ${imageOrder}`}>
         <img

@@ -8,7 +8,7 @@ import { Dropdown } from 'flowbite-react';
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white bottom-0 w-screen overflow-hidden">
-      <div className="container mx-auto py-8 px-4 xxs:px-2  sm:px-6 lg:px-8">
+      <div className="container mx-auto  xxs:px-4 xl:px-0  sm:px-6 md:px-6  max-w-[1500px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Product Section */}
           <div>
@@ -53,17 +53,17 @@ const Footer = () => {
           </div>
 
           {/* Subscribe Section */}
-          <div className='max-w-screen'>
+          <div className=''>
             <h2 className="text-lg font-semibold mb-4">Subscribe to our newsletter</h2>
             <form className="flex  xxs:flex-col xxshalf:flex-row">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="py-2 px-4 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary bg-gray-200 flex-grow max-w-full"
+                className="py-2 px-4 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary bg-gray-200 flex-grow xxs:w-[100%] xxs:rounded-r-md xxshalf:rounded-r-none xxshalf:max-w-[70%] xxs:text-center xxshalf:text-start"
               />
               <button
                 type="submit"
-                className="bg-primary py-2 px-6 rounded-r-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-primary"
+                className="bg-primary py-2 px-6 rounded-r-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-primary xxs:rounded-l-md xxshalf:rounded-l-none  xxs:w-[100%] xxshalf:max-w-[30%] flex items-center justify-center"
               >
                 Subscribe
               </button>

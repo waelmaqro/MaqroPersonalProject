@@ -19,7 +19,7 @@ const PricingCards = () => {
   };
 
   return (
-    <div className="z-20 my-[100px]  flex justify-center items-center flex-col ">
+    <div className="z-20 max-w-[1500px]  flex justify-center items-center flex-col ">
       <div className="flex justify-center mb-4  border-primary border-4 hover:opacity-90">
         <button
           className={`${
@@ -40,13 +40,13 @@ const PricingCards = () => {
       </div>
       
       {/* Card */}
-      <div className="grid xxs:grid-cols-1 md:grid-cols-3 gap-4  px-4 justify-center items-center xl:w-[80%] xxl:w-[1500px]">
+      <div className="grid xxs:grid-cols-1 md:grid-cols-3 gap-4  px-4 justify-center items-center max-w-[1500px]">
         {PricingData.map((pricing, index) => (
           <div
             key={index}
            className=" xs:min-w-[350px] md:min-w-[280px] bg-gray-700 p-6 rounded-md text-white opacity-80 "
           >
-            <div  className="xs:grid xs:grid-cols-2 md:flex md:flex-col xxs:flex xxs:flex-col  ">
+            <div  className="xs:grid xs:grid-cols-3 md:flex md:flex-col xxs:flex xxs:flex-col max-w-fit w-[500px] xs:w-screen xs:items-center xs:gap-4 md:items-start sm:mx-auto ">
             {/* div 1 */}
             <div>
             <h5 className="mb-4 text-xl font-medium ">
@@ -108,13 +108,14 @@ const PricingCards = () => {
                   </li>
                 ))}
             </ul>
+            
+            </div>
             <button
               type="button"
               className="inline-flex w-full justify-center rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-medium text-white hover:opacity-80 focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
             >
               {pricing.button}
             </button>
-            </div>
             </div>
           </div>
         ))}
