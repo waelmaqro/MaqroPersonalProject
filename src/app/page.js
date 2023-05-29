@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import FlowCarousel from "@/Components/FlowCarousel";
 import {
   Navbar,
@@ -15,34 +14,6 @@ import CustomMediaQuery from "./Queries/CustomMediaQuery";
 import { Carousel } from "flowbite-react";
 
 export default function Home() {
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.querySelector("#hero");
-      const fixedImage = document.querySelector("#fixed-image");
-      const secondImage = document.querySelector("#landing-image2");
-      const scrollPosition = window.pageYOffset;
-
-      if (heroSection && fixedImage) {
-        const heroSectionHeight = heroSection.offsetHeight;
-        const heroSectionBottom = heroSection.offsetTop + heroSectionHeight;
-
-        if (scrollPosition >= heroSectionBottom) {
-          fixedImage.style.opacity = "0";
-          secondImage.style.opacity = "0.5";
-
-        } else {
-          fixedImage.style.opacity = "0.5";
-          secondImage.style.opacity = scrollPosition > "-10" ? "0" : "1";
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  
-
   const isSmallScreen = CustomMediaQuery("(max-width: 1199px)");
 
   return (
@@ -78,7 +49,6 @@ export default function Home() {
         src="/landingimage.jpg"
         alt="Picture of the author"
         className="w-screen h-screen object-cover opacity-70 fixed top-0 "
-        id="fixed-image"
       />
 
       {/* Body */}
@@ -131,17 +101,14 @@ export default function Home() {
         </section>
       </section>
 
+    
+      <section className="z-[20] bg-gray-800 py-10">
+        
       {/* Carousel Section */}
-      <section className="my-[100px] z-[21]">
+      <section className="my-[100px] z-[21] bg-[url('/landingimage2.avif')] bg-fixed bg-cover">
         <FlowCarousel />
       </section>
-      <img
-        src="/landingimage2.avif"
-        alt="Picture of the author"
-        className="w-screen h-screen object-cover opacity-50 fixed top-0 "
-        id="landing-image2"
-      />
-      <section className="z-[20] bg-gray-800 py-10">
+   
         {/* Pricing Cards Section */}
         <section className="my-[100px] flex justify-center items-center flex-col gap-4 ">
           <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-semibold opacity-80 text-white text-center">
