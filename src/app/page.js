@@ -133,7 +133,7 @@ export default function Home() {
         {/* Blog Section */}
         <section className="my-[100px] flex justify-center items-center flex-col gap-4">
           <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-semibold opacity-80 text-white">
-            What's new?
+            What&apos;s new?
           </h2>
           <p className="md:max-w-[70%] xxs:w-[85%] sm:w-[70%] text-center text-white  xxl:text-3xl xxs:text-xl xxs:max-w-screen flex flex-col md:gap-4 xxs:gap-2 font-bold justify-center items-center opacity-80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
