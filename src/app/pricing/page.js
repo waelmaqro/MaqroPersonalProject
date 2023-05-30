@@ -1,4 +1,4 @@
-import Parallax from "./Components/parallax";
+
 
 export default function Pricing() {
   return (
