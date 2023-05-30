@@ -1,12 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Dropdown } from "flowbite-react";
 import CustomMediaQuery from "../app/Queries/CustomMediaQuery";
 import { MenuRounded, CloseRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
+  const router = usePathname();
+  
+
   const hamburgerMenu = CustomMediaQuery("(max-width: 1179px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [color, setColor] = useState("transparent");
@@ -47,37 +51,59 @@ const Navbar = () => {
             color: textColor,
             transition: "background-color 0.3s",
           }}
-          className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-center items-center z-40 shadow-sm  `}
+          className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-center items-center z-40 shadow-sm overflow-hidden  `}
         >
           <div className=" flex justify-between w-full max-w-[1500px]">
-            <div className="min-w-[200px]">
+            <Link className="min-w-[200px]" href="/">
               <img src="/porche.png" className="max-w-[50px]" />
-            </div>
+            </Link>
 
             <div className="flex justify-center items-center gap-4 ">
-              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300"
+              >
                 <Dropdown label="Features" inline={true} className="w-[200px]">
                   <Dropdown.Item>Feature</Dropdown.Item>
                   <Dropdown.Item>Feature</Dropdown.Item>
                   <Dropdown.Item>Feature</Dropdown.Item>
                 </Dropdown>
               </div>
-              <Link href="/">
-                <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+              <Link
+                href="/pricing"
+                className={
+                  router === "/pricing"
+                    ? "bg-gray-700 rounded-md"
+                    : ""
+                }
+              >
+                <div
+                  className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300"
+                >
                   Pricing
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/about-us"  className={
+                  router === "/about-us"
+                    ? "bg-gray-700 rounded-md"
+                    : ""
+                }>
                 <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                   About us
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/contact"  className={
+                  router === "/contact"
+                    ? "bg-gray-700 rounded-md"
+                    : ""
+                }>
                 <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                   Contact
                 </div>
               </Link>
-              <Link href="/">
+              <Link href="/blog"  className={
+                  router === "/blog"
+                    ? "bg-gray-700 rounded-md"
+                    : ""
+                }>
                 <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                   Blog
                 </div>
@@ -119,7 +145,7 @@ const Navbar = () => {
                   animate="visible"
                   transition={{ ease: "easeOut", duration: 0.2 }}
                   exit="exit"
-                  className="fixed left-0 top-0 bottom-0 height[100%] bg-lavender p-2 w-[300px] transition-300 shadow-md  bg-gray-800 "
+                  className="fixed left-0 top-0 bottom-0 height[100%] bg-lavender p-2 w-screen transition-300 shadow-md  bg-gray-800 "
                 >
                   {/* CLOSE ICON */}
                   <div className="flex justify-end p-12">
@@ -129,27 +155,31 @@ const Navbar = () => {
                   </div>
 
                   {/* MENU ITEMS */}
-                  <div className="flex flex-col gap-10 ml-5 text-2xl  text-primary font-semibold max-w-screen">
-                    <Link href="/">
+                  <div className="flex flex-col gap-10 ml-5 text-2xl  text-white font-semibold max-w-screen justify-center items-center">
+                    <Link href="/pricing">
                       <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                         Pricing
                       </div>
                     </Link>
-                    <Link href="/">
+                    <hr className="my-2 border-white " />
+                    <Link href="/about-us">
                       <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                         About us
                       </div>
                     </Link>
-                    <Link href="/">
+                    <hr className="my-2 border-gray-700" />
+                    <Link href="/contact">
                       <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                         Contact
                       </div>
                     </Link>
-                    <Link href="/">
+                    <hr className="my-2 border-gray-700" />
+                    <Link href="/blog">
                       <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                         Blog
                       </div>
                     </Link>
+                    <hr className="my-2 border-gray-700" />
                     <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                       <Dropdown
                         label="Features"
@@ -161,39 +191,47 @@ const Navbar = () => {
                           aria-labelledby="dropdownDefaultButton"
                         >
                           <li>
-                            <a
-                              href="#"
+                            <Link
+                              href="/feature"
                               class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
                               Feature
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <Link
+                              href="/feature"
                               class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
                               Feature
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <Link
+                              href="/feature"
                               class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
                               Feature
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <Link
+                              href="/feature"
                               class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
                               Feature
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </Dropdown>
+                    </div>
+                    <div className="flex items-center gap-4 min-w-[200px] opacity-90 xxs:flex-col xs:flex-row">
+                      <button className="bg-primary px-6 py-2 text-white rounded-md min-w-[100px] ">
+                        Sign in
+                      </button>
+                      <button className="px-6 py-2  bg-gray-700 text-white rounded-md min-w-[100px]">
+                        Sign up
+                      </button>
                     </div>
                   </div>
                 </motion.div>

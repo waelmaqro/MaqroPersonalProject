@@ -20,19 +20,19 @@ const PricingCards = () => {
 
   return (
     <div className="z-20 max-w-[1500px]  flex justify-center items-center flex-col ">
-      <div className="flex justify-center mb-4  border-primary border-4 hover:opacity-90">
+      <div className="flex justify-center mb-4  border-primary border-4 hover:opacity-90 rounded-full bg-gray-200 py-1 px-1">
         <button
           className={`${
-            isYearly ? "bg-primary text-white " : "bg-gray-200 text-gray-900 text-opacity-80"
-          } px-4 py-2  `}
+            isYearly ? "bg-gray-200 text-gray-900 text-opacity-80  " : " bg-primary  text-white"
+          } px-4 py-2  rounded-full min-w-[92.16px] `}
           onClick={handleToggle}
         >
           Monthly
         </button>
         <button
           className={`${
-            isYearly ? "bg-gray-200 text-gray-900 text-opacity-80" : "bg-primary text-white "
-          } px-4 py-2  `}
+            isYearly ? "bg-primary text-white" : " bg-gray-200    text-gray-900 text-opacity-80"
+          } px-4 py-2  rounded-full min-w-[92.16px]`}
           onClick={handleToggle}
         >
           Yearly

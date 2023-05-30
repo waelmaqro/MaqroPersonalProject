@@ -1,12 +1,11 @@
 "use client";
 import FlowCarousel from "@/Components/FlowCarousel";
 import {
-  Navbar,
-  Footer,
   FeatureCard,
   TrustedByCompanies,
   GetStarted,
   BlogCard,
+  Hero
 } from "../Components/Index";
 import PricingCards from "@/Components/PricingCards";
 import { BlogData } from "@/Components/ComponentData";
@@ -17,44 +16,22 @@ export default function Home() {
   const isSmallScreen = CustomMediaQuery("(max-width: 1199px)");
 
   return (
-    <main className="pt-[100px] flex flex-col  bg-gray-800 ">
-      {/* Navbar */}
-      <Navbar />
+    <main className="flex flex-col  bg-gray-800 overflow-hidden ">
+
 
       {/* Hero section */}
-      <section
-        className="flex flex-col flex-grow text-center justify-center items-center gap-4 overflow-hidden z-10 text-white  h-screen font px-4"
-        id="hero"
-      >
-        <h1 className="heading xxl:text-6xl sm:text-4xl xs:text-3xl xxs:text-xl text font-semibold opacity-80">
-          Porche, full spectrum - full synergy.
-        </h1>
-        <h1 className=" xxs:w-full xxl:max-w-[1500px] xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg opacity-80">
-          Experience luxury and performance like never before with Porche iconic
-          lineup of precision-engineered vehicles.
-        </h1>
-
-        <div className="flex justify-center items-center gap-2 opacity-100 sm:flex-row xxs:flex-col ">
-          <button className="bg-primary px-8 py-3 text-white opacity-100 rounded-md min-w-[200px]">
-            Join us now
-          </button>
-          <button className="px-8 py-3  bg-gray-700 text-white rounded-md min-w-[200px]">
-            Request Demo
-          </button>
-        </div>
-        <div className="flex w-screen justify-center items-center top-0 absolute z-0 "></div>
-      </section>
+     
       {/* Fixed image */}
-      <img
-        src="/landingimage.jpg"
-        alt="Picture of the author"
-        className="w-screen h-screen object-cover opacity-70 fixed top-0 "
-      />
+  
 
       {/* Body */}
       <section className="z-[20] bg-gray-800 py-10">
+        <section>
+          <Hero heading="Porche, full spectrum - full synergy." text="Experience luxury and performance like never before with Porche iconic
+      lineup of precision-engineered vehicles." button1="Join us now" button2="Request Demo"/>
+        </section>
         {/* Trusted Section */}
-        <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-10 my-[100px] z-[20]">
+        <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-10 mt-[100px] z-[20]">
           <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-semibold opacity-80">
             Trusted by
           </h2>
@@ -98,11 +75,9 @@ export default function Home() {
             </>
           )}
         
-        </section>
+       
       </section>
 
-    
-      <section className="z-[20] bg-gray-800 py-10">
         
       {/* Carousel Section */}
       <section className="my-[100px] z-[21] bg-[url('/landingimage2.avif')] bg-fixed bg-cover">
@@ -121,7 +96,7 @@ export default function Home() {
         </section>
 
         {/* Get Started Section */}
-        <section className="my-[100px] flex justify-center">
+        <section className="my-[100px] flex justify-center ">
           <GetStarted
             header="Get started!"
             text="Maecenas ullamcorper ullamcorper est, in condimentum ex volutpat ut.
@@ -152,8 +127,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-        {/* Footer */}
-        <Footer />
       </section>
     </main>
   );

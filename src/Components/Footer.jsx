@@ -5,9 +5,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Dropdown } from 'flowbite-react';
 
+
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white bottom-0 w-screen overflow-hidden">
+    <footer className="bg-gray-800 text-white bottom-0 w-screen overflow-hidden z-[100]">
       <div className="container mx-auto  xxs:px-4 xl:px-0  sm:px-6 md:px-6  max-w-[1500px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Product Section */}
