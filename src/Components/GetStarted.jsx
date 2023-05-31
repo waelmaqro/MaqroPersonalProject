@@ -4,8 +4,8 @@ const GetStarted = ({header, text, button}) => {
   return (
     <div className="my-[100px] justify-center flex px-4 max-w-[1500px]">
       <div className="grid xxs:grid-cols-1 md:grid-cols-2  max-w-[1500px] rounded-lg overflow-hidden shadow-lg border-opacity-60 text-white gap-[20]">
-        <div className=" xxs:order-2 sm:order-1 flex justify-start items-start text-start opacity-90 xxs:max-w-screen flex-col md:gap-12 xxs:gap-8  font-bold py-[20%] px-[10%]">
-          <h1 className="heading xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg text font-semibold opacity-80">
+        <div className=" xxs:order-2 sm:order-1 flex justify-start items-start text-start opacity-90 xxs:max-w-screen flex-col md:gap-12 xxs:gap-8   py-[20%] px-[10%]">
+          <h1 className="heading xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg text font-bold opacity-80">
             {header}
           </h1>
           <p className="opacity-80 xxl:text-3xl sm:text-3xl xs:text-xl xxs:text-lg " style={{lineHeight: "40px"}}>

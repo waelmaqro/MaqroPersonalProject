@@ -69,3 +69,18 @@ export const BlogData = [
     date: '22nd May.'
   }
 ]
+
+export const HeroSectionSlides = [
+  {
+    imgSrc: 'https://images.unsplash.com/photo-1613921568536-555645be4032?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1644&q=80',
+    text: 'Contemporary, dynammic & urban'
+  },
+  {
+    imgSrc: 'https://images.unsplash.com/photo-1601679147136-22d1032399e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1624&q=80',
+    text: 'Modern, revolutionary design.'
+  },
+  {
+    imgSrc: 'https://images.unsplash.com/photo-1619251293669-3e5f6a1a3cca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1746&q=80',
+    text: 'Power from within.'
+  }
+]

@@ -9,7 +9,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const FlowCarousel = (Slides) => {
   const isSmallScreen = CustomMediaQuery("(max-width: 600px)");
   return (
-    <div className="h-[400px]  sm:h-64 xl:h-80 2xl:h-[500px] max-w-screen" >
+    <div className="h-[400px]  sm:h-64 xl:h-80 2xl:h-[500px] max-w-[1500px]" >
     <Carousel slideInterval={5000} leftControl={isSmallScreen ? " " : undefined} rightControl={isSmallScreen ? " " : undefined }>
       {CarouselData.map((slide, index) => (
  

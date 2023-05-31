@@ -51,7 +51,7 @@ const Navbar = () => {
             color: textColor,
             transition: "background-color 0.3s",
           }}
-          className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-center items-center z-40 shadow-sm overflow-hidden  `}
+          className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-center items-center z-40 shadow-sm   `}
         >
           <div className=" flex justify-between w-full max-w-[1500px]">
             <Link className="min-w-[200px]" href="/">
@@ -61,7 +61,7 @@ const Navbar = () => {
             <div className="flex justify-center items-center gap-4 ">
               <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300"
               >
-                <Dropdown label="Features" inline={true} className="w-[200px]">
+                <Dropdown label="Features" inline={true} placement="bottom" className="w-[200px]">
                   <Dropdown.Item>Feature</Dropdown.Item>
                   <Dropdown.Item>Feature</Dropdown.Item>
                   <Dropdown.Item>Feature</Dropdown.Item>
