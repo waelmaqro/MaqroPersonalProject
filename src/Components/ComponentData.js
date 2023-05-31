@@ -84,3 +84,27 @@ export const HeroSectionSlides = [
     text: 'Power from within.'
   }
 ]
+
+export const FeatureCardData = [
+  {
+    title:"Feature",
+    imageUrl:"https://th.bing.com/th/id/OIG.qzbiy8gGKnzTwo0c260j?pid=ImgGn",
+    description: "Experience luxury and performance like never before with Porche iconic lineup of precision-engineered vehicles.",
+    switch: true,
+    id: "1"
+  },
+  {
+    title:"Feature",
+    imageUrl:"https://th.bing.com/th/id/OIG.JY4c3t69llXyWJsOpSGp?pid=ImgGn",
+    description: "Experience luxury and performance like never before with Porche iconic lineup of precision-engineered vehicles.",
+    switch: false,
+    id: "2",
+  },
+  {
+    title:"Feature",
+    imageUrl:"https://th.bing.com/th/id/OIG.zdfi8nVCNLyvNmQtngia?pid=ImgGn",
+    description: "Experience luxury and performance like never before with Porche iconic lineup of precision-engineered vehicles.",
+    switch: true,
+    id: "3",
+  }
+]

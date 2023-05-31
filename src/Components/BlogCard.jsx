@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 
 const BlogCard = ({imgSrc, authorName, blogTitle, date, duration}) => {
@@ -6,7 +7,7 @@ const BlogCard = ({imgSrc, authorName, blogTitle, date, duration}) => {
     <div className="">
     <div className=" xs:min-w-[350px] md:min-w-[280px] bg-gray-700 xxs:p-0 xs:p-6 rounded-md text-white text-opacity-80  ">
       <div className="sm:grid sm:grid-cols-2 md:flex md:flex-col xxs:flex xxs:flex-col  ">
-        <img src={imgSrc} />
+        <Image width={600} height={600} className="w-full" src={imgSrc} />
         <div className="flex flex-col p-4">
         <h5 className="text-xl tracking-tight">
             {authorName}

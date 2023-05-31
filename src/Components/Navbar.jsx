@@ -6,10 +6,14 @@ import { Dropdown } from "flowbite-react";
 import CustomMediaQuery from "../app/Queries/CustomMediaQuery";
 import { MenuRounded, CloseRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const router = usePathname();
   
+  const routing = useRouter();
+
+ 
 
   const hamburgerMenu = CustomMediaQuery("(max-width: 1179px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -62,9 +66,16 @@ const Navbar = () => {
               <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300"
               >
                 <Dropdown label="Features" inline={true} placement="bottom" className="w-[200px]">
-                  <Dropdown.Item>Feature</Dropdown.Item>
-                  <Dropdown.Item>Feature</Dropdown.Item>
-                  <Dropdown.Item>Feature</Dropdown.Item>
+                 <Link href="/features#1">
+                 <Dropdown.Item>Feature</Dropdown.Item>
+                 </Link> 
+                 <Link href="/features#2">
+                 <Dropdown.Item>Feature</Dropdown.Item>
+                 </Link>
+                 <Link href="/features#3">
+                 <Dropdown.Item>Feature</Dropdown.Item>
+                 </Link>
+                  
                 </Dropdown>
               </div>
               <Link

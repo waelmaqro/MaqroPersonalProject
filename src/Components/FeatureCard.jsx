@@ -1,18 +1,21 @@
 import React from 'react'
+import Image from 'next/image';
 
-const FeatureCard = ({title, imageUrl, description, flipSwitch}) => {
+const FeatureCard = ({title, imageUrl, description, flipSwitch, divid}) => {
     const imageOrder = flipSwitch ? 'order-1' : 'lg:order-2';
     const textOrder = flipSwitch ? 'order-2' : 'lg:order-1';
   
   return (
-    <div className="xxs:w-full lg:max-w-[1500px] items-center flex flex-col gap-8 justify-center ">
+    <div className="xxs:w-full lg:max-w-[1500px] items-center flex flex-col gap-8 justify-center " id={divid}>
     <div className="grid lg:grid-cols-2 xxs:grid-cols-1 grid-cols-2 gap-8 px-4 items-center text-white opacity-80">
       {/* Image */}
       <div className={`flex ${imageOrder}`}>
-        <img
+        <Image
           src={imageUrl}
           alt={title}
-          className=" object-cover opacity-70 rounded-lg"
+          className=" object-cover opacity-70 rounded-lg w-full"
+          width={1000}
+          height={1000}
         />
       </div>
       {/* Text */}

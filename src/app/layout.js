@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
-        <main className="max-w-screen overflow-hidden">
+        <main className="max-w-screen overflow-hidden bg-gray-800">
           {" "}
           <Navbar />
           {children}
