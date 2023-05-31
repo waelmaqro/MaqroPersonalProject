@@ -124,7 +124,7 @@ export default function Home() {
             ))}
           </div>
           <Link href="/blog">
-          <button className="px-8 py-3  bg-gray-700 text-white rounded-md min-w-[200px]">
+          <button className="px-8 py-3  bg-gray-700 hover:opacity-75 text-white rounded-md min-w-[200px] transition duration-300">
             See more articles
           </button>
           </Link>

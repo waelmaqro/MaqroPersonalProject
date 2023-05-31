@@ -110,10 +110,10 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="flex items-center gap-4 min-w-[200px] opacity-90">
-              <button className="bg-primary px-6 py-2 text-white rounded-md min-w-[100px] ">
+              <button className="hover:bg-gray-700 px-6 py-2 text-white rounded-md min-w-[100px] transition duration-300">
                 Sign in
               </button>
-              <button className="px-6 py-2  bg-gray-700 text-white rounded-md min-w-[100px]">
+              <button className="px-6 py-2  hover:bg-gray-700 text-white rounded-md min-w-[100px] transition duration-300">
                 Sign up
               </button>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Carousel } from 'flowbite-react'
 import { HeroSectionSlides } from './ComponentData'
+import Image from 'next/image'
 
 const Hero = ({heading, text, button1, button2}) => {
   return (
@@ -27,7 +28,7 @@ const Hero = ({heading, text, button1, button2}) => {
     <Carousel className='max-w-[1500px] w-[90%] relative pb-10' style={{ height: "60%"}} slideInterval={10000} leftControl=" " rightControl=" ">
       {HeroSectionSlides.map ((data,index) => (
         <>
-        <img className="h-full w-full object-cover object-center rounded-lg shaow-lg opacity-95" src={data.imgSrc} alt='herosectionimage'key={index}/> 
+        <Image width={100} height={100} className=" object-cover object-center rounded-lg shaow-lg opacity-95" src={data.imgSrc} alt='herosectionimage'key={index}/> 
         {/* <p className='xxs:left-0 xxs:right-0 xxs:bottom-2 xs:right-auto absolute xs:left-4 xs:bottom-4 font-semibold opacity-80 text-center  xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg'>{data.text}</p>   */}
         </>
       ))}
