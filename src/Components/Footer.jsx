@@ -102,7 +102,7 @@ const Footer = () => {
 
         <div className="flex ss:flex-row xxs: xxs:gap-2 flex-col items-center  justify-between">
           <div className=" bg-gray-700 py-2 px-4 rounded-md">
-            <Dropdown label="English" inline={true}>
+            <Dropdown label="English" inline={true} placement="top">
               <Dropdown.Item className="min-w-[100px] flex justify-start">
                 Other
               </Dropdown.Item>
