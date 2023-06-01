@@ -10,10 +10,8 @@ import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const router = usePathname();
-  
-  const routing = useRouter();
 
- 
+  const routing = useRouter();
 
   const hamburgerMenu = CustomMediaQuery("(max-width: 1179px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -55,66 +53,66 @@ const Navbar = () => {
             color: textColor,
             transition: "background-color 0.3s",
           }}
-          className={`fixed top-0 w-screen text-lg text-white flex px-10 py-4 justify-center items-center z-40 shadow-sm   `}
+          className={`fixed top-0 w-screen text-lg text-white flex px-10 py-2 justify-center items-center z-40 shadow-sm   `}
         >
           <div className=" flex justify-between w-full max-w-[1500px]">
             <Link className="min-w-[200px]" href="/">
-              <img src="/porche.png" className="max-w-[50px]" />
+              <img src="/porche.png" className="max-w-[35px]" />
             </Link>
 
             <div className="flex justify-center items-center gap-4 ">
-              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300"
-              >
-                <Dropdown label="Features" inline={true} placement="bottom" className="w-[200px]">
-                 <Link href="/features#1">
-                 <Dropdown.Item>Feature</Dropdown.Item>
-                 </Link> 
-                 <Link href="/features#2">
-                 <Dropdown.Item>Feature</Dropdown.Item>
-                 </Link>
-                 <Link href="/features#3">
-                 <Dropdown.Item>Feature</Dropdown.Item>
-                 </Link>
-                  
+              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+                <Dropdown
+                  label="Features"
+                  inline={true}
+                  placement="bottom"
+                  className="w-[200px]"
+                >
+                  <Link href="/features#1">
+                    <Dropdown.Item>Feature</Dropdown.Item>
+                  </Link>
+                  <Link href="/features#2">
+                    <Dropdown.Item>Feature</Dropdown.Item>
+                  </Link>
+                  <Link href="/features#3">
+                    <Dropdown.Item>Feature</Dropdown.Item>
+                  </Link>
                 </Dropdown>
               </div>
               <Link
                 href="/pricing"
                 className={
-                  router === "/pricing"
-                    ? "bg-gray-700 rounded-md"
-                    : ""
+                  router === "/pricing" ? "bg-gray-700 rounded-md" : ""
                 }
               >
-                <div
-                  className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300"
-                >
+                <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                   Pricing
                 </div>
               </Link>
-              <Link href="/about-us"  className={
-                  router === "/about-us"
-                    ? "bg-gray-700 rounded-md"
-                    : ""
-                }>
+              <Link
+                href="/about-us"
+                className={
+                  router === "/about-us" ? "bg-gray-700 rounded-md" : ""
+                }
+              >
                 <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                   About us
                 </div>
               </Link>
-              <Link href="/contact"  className={
-                  router === "/contact"
-                    ? "bg-gray-700 rounded-md"
-                    : ""
-                }>
+              <Link
+                href="/contact"
+                className={
+                  router === "/contact" ? "bg-gray-700 rounded-md" : ""
+                }
+              >
                 <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                   Contact
                 </div>
               </Link>
-              <Link href="/blog"  className={
-                  router === "/blog"
-                    ? "bg-gray-700 rounded-md"
-                    : ""
-                }>
+              <Link
+                href="/blog"
+                className={router === "/blog" ? "bg-gray-700 rounded-md" : ""}
+              >
                 <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                   Blog
                 </div>
