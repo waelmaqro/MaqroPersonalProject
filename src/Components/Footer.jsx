@@ -100,10 +100,10 @@ const Footer = () => {
 
         <hr className="my-8 border-gray-700" />
 
-        <div className="flex ss:flex-row xxs: xxs:gap-2 flex-col items-center  justify-between">
-          <div className=" bg-gray-700 py-2 px-4 rounded-md">
-            <Dropdown label="English" inline={true} placement="top">
-              <Dropdown.Item className="min-w-[100px] flex justify-start">
+        <div className="flex ss:flex-row xxs: xxs:gap-2 flex-col items-center  justify-between overflow-hidden">
+          <div className=" bg-gray-700 py-2 px-4 rounded-md relative">
+            <Dropdown label="English" inline={true} placement="top" >
+              <Dropdown.Item className="min-w-[100px] flex justify-start absolute top-[-50px]">
                 Other
               </Dropdown.Item>
             </Dropdown>
