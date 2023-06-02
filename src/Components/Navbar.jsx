@@ -55,18 +55,18 @@ const Navbar = () => {
           }}
           className={`fixed top-0 w-screen text-lg text-white flex px-10 py-2 justify-center items-center z-40 shadow-sm   `}
         >
-          <div className=" flex justify-between w-full max-w-[1500px]">
+          <div className=" flex justify-between w-full max-w-[1600px]">
             <Link className="min-w-[200px]" href="/">
               <img src="/porche.png" className="max-w-[35px]" />
             </Link>
 
-            <div className="flex justify-center items-center gap-4 ">
-              <div className="hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
+            <div className="flex justify-center items-center gap-2 ">
+              <div className="flowbite-dropdown hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
                 <Dropdown
                   label="Features"
                   inline={true}
                   placement="bottom"
-                  className="w-[200px]"
+                  className=" w-[200px]"
                 >
                   <Link href="/features#1">
                     <Dropdown.Item>Feature</Dropdown.Item>
@@ -122,7 +122,7 @@ const Navbar = () => {
               <button className="hover:bg-gray-700 px-6 py-2 text-white rounded-md min-w-[100px] transition duration-300">
                 Sign in
               </button>
-              <button className="px-6 py-2  hover:bg-gray-700 text-white rounded-md min-w-[100px] transition duration-300">
+              <button className="px-6 py-2 bg-gray-700 hover:opacity-80 text-white  min-w-[100px] transition duration-300">
                 Sign up
               </button>
             </div>

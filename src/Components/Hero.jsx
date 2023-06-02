@@ -5,21 +5,21 @@ import { HeroSectionSlides } from './ComponentData'
 const Hero = ({heading, text, button1, button2, showButtons}) => {
   return (
     <section
-    className="flex flex-col flex-grow text-center justify-center items-center gap-4 overflow-hidden z-10 text-white w-screen  h-screen px-2"
+    className="flex flex-col flex-grow text-center justify-center items-center overflow-hidden z-10 text-white w-screen  h-screen px-2 gap-5"
   >
     <h1 className="heading xxl:text-6xl sm:text-4xl xs:text-3xl xxs:text-xl text font-bold opacity-90">
       {heading}
     </h1>
-    <h1 className=" xxs:w-full xxl:max-w-[1500px] xxl:text-5xl sm:text-3xl xs:text-xl xxs:text-lg opacity-90">
+    <h1 className=" xxs:w-full  xxl:text-3xl sm:text-xl xxs:text-md opacity-90 xlg:max-w-[60%]">
       {text}
     </h1>
 
     {showButtons && (
-        <div className="flex justify-center items-center gap-2 opacity-100 sm:flex-row xxs:flex-col">
-          <button className="bg-primary px-8 py-3 text-white opacity-100 rounded-md min-w-[200px]">
+        <div className="flex justify-center items-center opacity-100 sm:flex-row xxs:flex-col gap-4 text-xl my-[20px]">
+          <button className="bg-primary px-8 py-3 text-white opacity-100  min-w-[200px]">
             {button1}
           </button>
-          <button className="px-8 py-3  bg-gray-700 text-white rounded-md min-w-[200px]">
+          <button className="px-8 py-3 border border-white border-opacity-90 text-white  min-w-[200px]">
             {button2}
           </button>
         </div>

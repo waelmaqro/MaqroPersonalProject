@@ -5,14 +5,14 @@ import Image from "next/image";
 const BlogCard = ({imgSrc, authorName, blogTitle, date, duration}) => {
   return (
     <div className="">
-    <div className=" xs:min-w-[350px] md:min-w-[280px] bg-gray-700 xxs:p-0 xs:p-6 rounded-md text-white text-opacity-80  ">
+    <div className=" xs:min-w-[350px] md:min-w-[280px] bg-gray-700 xxs:p-0   text-white text-opacity-80 border-2 border-white border-opacity-50  ">
       <div className="sm:grid sm:grid-cols-2 md:flex md:flex-col xxs:flex xxs:flex-col  ">
         <Image width={600} height={600} className="w-full" src={imgSrc} />
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col p-6">
         <h5 className="text-xl tracking-tight">
             {authorName}
           </h5>
-          <h5 className="text-2xl  tracking-tight ">
+          <h5 className=" xxl:text-3xl sm:text-3xl xs:text-xl xxs:text-lg font-bold mb-8">
             {blogTitle}
           </h5>
           <div className="flex justify-between items-center w-full my-1 ">

@@ -1,18 +1,24 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
-import { Dropdown } from "flowbite-react";
+
+
 
 const Footer = () => {
+
+
   return (
-    <footer className="bg-gray-800 text-white w-screen overflow-hidden z-[20] py-4">
-      <div className="container mx-auto  xxs:px-2  sm:px-6 md:px-6  max-w-[1500px]">
-        <div className="lg:grid xxs:flex xxshalf:flex-row xxshalf:justify-between xxs:justify-center xxs:items-center xxshalf:items-start xxs:flex-col  flex-wrap  xxs:text-center lg:text-start lg:items-start  lg:grid-cols-5 gap-2">
-          <img src="/porche.png" className="w-[50px] h-[70px]" />
+    <footer className="bg-gray-900 text-white  pt-[100px]">
+      
+      <div className="container mx-auto px-4">
+    
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex lg:items-start lg:gap-[100px] lg:justify-center">
+        <div>
+        <img src="/porche.png" className="w-[50px]" alt=""/>
+      </div>
           {/* Product Section */}
           <div>
             <h2 className="text-lg font-semibold mb-4">Product</h2>
@@ -45,7 +51,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-gray-300">
+                <Link href="/webinars" className="hover:text-gray-300">
                   Webinars
                 </Link>
               </li>
@@ -57,40 +63,38 @@ const Footer = () => {
             <h2 className="text-lg font-semibold mb-4">Company</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-gray-300">
+                <Link href="/about" className="hover:text-gray-300">
                   About
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-gray-300">
-                  Join Us
+                  Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Subscribe Section */}
-          <div className="w-full felx">
-            <h2 className="text-lg font-semibold">
-              Subscribe to our newsletter
-            </h2>
-            <a href="#" className="hover:text-gray-300 ">
+          <div>
+            <h2 className="text-lg font-semibold mb-4 max-w-[420px]">Subscribe</h2>
+            <p className="mb-2">
               For product announcements and exclusive insights
-            </a>
-            <form className="flex  xxs:flex-col lg:flex-row xxs:justify-center lg:justify-start items-center  my-1 ">
-              <div className="relative ">
+            </p>
+            <form className="flex items-center lg:w-[420px] ">
+              <div className="relative flex-grow ">
                 <input
                   type="email"
-                  placeholder="Enter your email"
-                  className="py-2 pl-8 rounded-l-md  focus:ring-2 focus:ring-gray-700 bg-gray-200 flex-grow xxs:w-fit xxs:rounded-r-md lg:rounded-r-none xxs:text-center lg:text-start  text-gray-700 xxs:max-w-[220px] lg:w-[160px]"
+                  placeholder="Input your email"
+                  className="py-2 pl-8 pr-4  focus:ring-2 focus:ring-gray-700 bg-gray-200  text-gray-700 w-full"
                 />
-                <div className="absolute inset-y-0 left-1 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-2 flex items-center pointer-events-none">
                   <EmailIcon className="h-5 w-5 text-gray-700" />
                 </div>
               </div>
               <button
                 type="submit"
-                className="bg-gray-700 py-2 px-6 rounded-r-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-primary xxs:rounded-l-md lg:rounded-l-none  xxs:w-full flex items-center justify-center xxs:max-w-[220px] lg:w-[80px]"
+                className="bg-gray-700 py-2 px-6 text-white font-semibold focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 Subscribe
               </button>
@@ -98,24 +102,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="my-8 border-gray-700" />
+        <hr className="mt-8 border-gray-700" />
 
-        <div className="flex ss:flex-row xxs: xxs:gap-2 flex-col items-center  justify-between overflow-hidden">
-          <div className=" bg-gray-700 py-2 px-4 rounded-md relative">
-            <Dropdown label="English" inline={true} placement="top" >
-              <Dropdown.Item className="min-w-[100px] flex justify-start absolute top-[-50px]">
-                Other
-              </Dropdown.Item>
-            </Dropdown>
+        <div className="flex flex-col-reverse sm:flex-row justify-between items-center py-6 ">
+          <div>
+            English
           </div>
+          <p className="text-sm">
+            &copy; 2023 Porsche Inc. &middot; Privacy Policy &middot; Terms of Service &middot; Sitemap
+          </p>
 
-          <div className="text-center">
-            <p className="text-sm">
-              2023 Porche Inc. · Privacy · Terms · Sitemap
-            </p>
-          </div>
-
-          <div className="flex justify-center items-center gap-1">
+          <div className="flex justify-center space-x-4 mt-4 sm:mt-0">
             <FacebookIcon />
             <LinkedInIcon />
             <YouTubeIcon />

@@ -25,13 +25,14 @@ export default function Home() {
       lineup of precision-engineered vehicles."
           button1="Join us now"
           button2="Request Demo"
+          showButtons={true}
         />
       </section>
       {/* Body */}
       <section className="z-[20] bg-gray-800 py-10">
         {/* Trusted Section */}
-        <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-10 mt-[100px] z-[20]">
-          <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-bold opacity-80">
+        <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-16 mt-[100px] z-[20]">
+          <h2 className="heading xxl:text-3xl sm:text-xl xxs:text-md text font-bold opacity-80">
             Trusted by
           </h2>
           <TrustedByCompanies />
@@ -82,11 +83,11 @@ export default function Home() {
         </section>
 
         {/* Pricing Cards Section */}
-        <section className="my-[100px] flex justify-center items-center flex-col gap-4 ">
-          <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-bold opacity-80 text-white text-center">
+        <section className="my-[100px] flex justify-center items-center flex-col  ">
+          <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-bold opacity-80 text-white text-center mb-[25px]">
             Pricing
           </h2>
-          <p className="md:max-w-[70%] xxs:w-[85%] sm:w-[70%] text-white  xxl:text-3xl xxs:text-xl xxs:max-w-screen flex flex-col md:gap-4 xxs:gap-2  justify-center items-center opacity-80 text-center">
+          <p className="md:max-w-[70%] xxs:w-[85%] sm:w-[70%] text-white  xxl:text-3xl xxs:text-xl xxs:max-w-screen   mb-[25px] justify-center items-center opacity-80 text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <PricingCards />
@@ -103,15 +104,15 @@ export default function Home() {
         </section>
 
         {/* Blog Section */}
-        <section className="my-[100px] flex justify-center items-center flex-col gap-4">
-          <h2 className="heading xxl:text-5xl sm:text-3xl xxs:text-2xl text font-bold opacity-80 text-white">
+        <section className="my-[100px] flex justify-center items-center flex-col gap-6">
+          <h2 className="heading xxl:text-6xl sm:text-3xl xxs:text-2xl text font-bold opacity-80 text-white">
             What&apos;s new?
           </h2>
-          <p className="md:max-w-[70%] xxs:w-[85%] sm:w-[70%] text-center text-white  xxl:text-3xl xxs:text-xl xxs:max-w-screen flex flex-col md:gap-4 xxs:gap-2  justify-center items-center opacity-80">
+          <p className="md:max-w-[45%] xxs:w-[85%] sm:w-[70%] text-center text-white  xxl:text-3xl xxs:text-xl xxs:max-w-screen flex flex-col md:gap-4 xxs:gap-2  justify-center items-center opacity-80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             gravida velit vitae commodo fringilla.
           </p>
-          <div className="flex justify-center items-center gap-4 md:flex-row xxs:flex-col px-4 max-w-[1500px]">
+          <div className="flex justify-center items-center gap-4 md:flex-row xxs:flex-col  max-w-[1500px] my-1 px-4">
             {BlogData.map((data, index) => (
               <BlogCard
                 key={index}
@@ -124,7 +125,7 @@ export default function Home() {
             ))}
           </div>
           <Link href="/blog">
-          <button className="px-8 py-3  bg-gray-700 hover:opacity-75 text-white rounded-md min-w-[200px] transition duration-300">
+          <button className="px-8 py-3  bg-gray-700  text-opacity-80 min-w-[200px] transition duration-300 font-medium text-white hover:opacity-80 xxs:text-lg md:text-xl mt-[50px]">
             See more articles
           </button>
           </Link>
