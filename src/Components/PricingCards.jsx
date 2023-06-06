@@ -21,7 +21,7 @@ const PricingCards = () => {
   };
 
   return (
-    <div className="z-20 max-w-[1500px] max-w-screen flex justify-center items-center flex-col ">
+    <div className="z-20 min-[1600px]:max-w-[1500px] md:max-w-[90%] max-w-screen flex justify-center items-center flex-col ">
       <div className="flex justify-center  border-primary border-4 hover:opacity-90  bg-gray-200 py-1 px-1 mb-[50px]">
         <button
           className={`${

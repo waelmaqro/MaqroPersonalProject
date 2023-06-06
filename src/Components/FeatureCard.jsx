@@ -10,7 +10,7 @@ const FeatureCard = ({ title, imageUrl, description, flipSwitch, divid }) => {
       className="xxs:w-full lg:max-w-[1500px] items-center flex flex-col gap-8 justify-center "
       id={divid}
     >
-      <div className="grid lg:grid-cols-2 xxs:grid-cols-1 grid-cols-2 xxs:gap-2 lg:gap-[17%] px-4 items-center justify-center text-white opacity-80">
+      <div className="grid md:grid-cols-2 xxs:grid-cols-1 grid-cols-2 xxs:gap-2 lg:gap-[17%] px-4 items-center justify-center text-white opacity-80 sm:max-w-[90%]">
         {/* Image */}
         <div className={`flex ${imageOrder}`}>
           <Image

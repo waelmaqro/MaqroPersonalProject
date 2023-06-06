@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col  bg-gray-800 overflow-hidden ">
-      <section className="h-screen w-screen bg-[url('/landingimage.jpg')] bg-fixed bg-cover bg-opacity-50 flex justify-center items-center">
+      <section className="h-[100%] w-screen bg-[url('/landingimage.jpg')] bg-fixed bg-cover bg-opacity-50 flex justify-center items-center ">
         <Hero
           heading="Porche, full spectrum - full synergy."
           text="Experience luxury and performance like never before with Porche iconic
@@ -31,15 +31,15 @@ export default function Home() {
       {/* Body */}
       <section className="z-[20] bg-gray-800 py-10">
         {/* Trusted Section */}
-        <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-16 mt-[100px] z-[20]">
-          <h2 className="heading xxl:text-3xl sm:text-xl xxs:text-md text font-bold opacity-80">
+        <section className="flex flex-col items-center justify-center text-white bg-gray-800 w-screen gap-16  z-[20] xxs:my-[50px] lg:my-[100px]">
+          <h2 className="heading xxl:text-5xl sm:text-2xl xxs:text-xl text font-bold opacity-80">
             Trusted by
           </h2>
           <TrustedByCompanies />
         </section>
 
         {/* Feature Section */}
-        <section className="my-[200px] flex flex-col gap-[100px] justify-center items-center ">
+        <section className="mb-[200px] flex flex-col gap-[100px] justify-center items-center ">
           {isSmallScreen ? (
             <Carousel leftControl=" " rightControl=" " className="py-10">
               <FeatureCard
