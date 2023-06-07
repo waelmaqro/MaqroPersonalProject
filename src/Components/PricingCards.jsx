@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
-
 import { PricingData } from "./ComponentData";
 import CloseIcon from '@mui/icons-material/Close';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import { Tooltip } from 'flowbite-react';
 
 const PricingCards = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -78,23 +79,24 @@ const PricingCards = () => {
               <div>
                 <ul role="list" className="my-7 space-y-2.5">
                   {pricing.features.map((feature, index) => (
-                    <li className="flex space-x-2" key={index}>
+                    <li className="flex space-x-2 items-center" key={index}>
                       <CheckCircleOutlineIcon className="h-10 w-10  text-primary"/>
                     
                       <span className="xxl:text-xl xxs:text-lg text opacity-80 text-white  ">
-                        {feature}
+                        {feature} 
                       </span>
+                      {index === 1 && <Tooltip content="ipsum dolor sit amet"> <InfoOutlinedIcon className="text-white opacity-80 text-[30px]" /> </Tooltip>}
                     </li>
                   ))}
                   {pricing.nonFeatures &&
                     pricing.nonFeatures.map((feature, index) => (
                       <li
-                        className="flex space-x-3 line-through decoration-gray-500"
+                        className="flex space-x-3 "
                         key={index}
                       >
-                        <CloseIcon className="text-gray-400 h-10 w-10"/>
+                        <CloseIcon className="h-9 w-9"/>
                     
-                        <span className="text-base font-normal leading-tight text-gray-500 xxl:text-xl xxs:text-lg  ">
+                        <span className="text-base font-normal leading-tight  xxl:text-xl xxs:text-lg opacity-80  ">
                           {feature}
                         </span>
                       </li>

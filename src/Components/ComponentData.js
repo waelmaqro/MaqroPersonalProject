@@ -32,7 +32,7 @@ export const PricingData = [
     subtitle: "Consectetur adipiscing elit vestibulum",
     monthlyPrice: '10',
     yearlyPrice: '100',
-    features: ['Lorem ipsum dolor sit amet ' , 'Lorem ipsum dolor ⓘ'],
+    features: ['Lorem ipsum dolor sit amet ' , 'Lorem ipsum dolor '],
     nonFeatures: ['Lorem ipsum dolor sit', 'Lorem ipsum dolor sit'],
     button: 'Upgrade'
   },
@@ -41,7 +41,7 @@ export const PricingData = [
     subtitle: "Consectetur adipiscing elit vestibulum",
     monthlyPrice: '20',
     yearlyPrice: '200',
-    features: ['Lorem ipsum dolor sit amet', 'Lorem ipsum dolor ⓘ', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit'],
+    features: ['Lorem ipsum dolor sit amet', 'Lorem ipsum dolor ', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit'],
     button: 'Upgrade',
     popular: "Popular"
   },
@@ -50,7 +50,7 @@ export const PricingData = [
     subtitle: "Consectetur adipiscing elit vestibulum",
     monthlyPrice: '30',
     yearlyPrice: '300',
-    features: ['Lorem ipsum dolor sit amet', 'Lorem ipsum dolor ⓘ', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit'],
+    features: ['Lorem ipsum dolor sit amet', 'Lorem ipsum dolor ', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit'],
     button: 'Contact sale'
   },
 

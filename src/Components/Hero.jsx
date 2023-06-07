@@ -26,7 +26,7 @@ const Hero = ({heading, text, button1, button2, showButtons}) => {
       )}
     
    
-    <Carousel className='max-w-[1500px]  relative pb-10  '  slideInterval={10000} leftControl=" " rightControl=" ">
+    <Carousel className='max-w-[1500px]  relative pb-10  '  slideInterval={10000} leftControl=" " rightControl=" " indicators={false}>
       {HeroSectionSlides.map ((data,index) => (
         <>
         <img className="h-full w-full object-cover object-center rounded-lg shaow-lg opacity-95 max-h-[700px] md:max-h-[500px] lg:max-h-[500px] xxl:max-h-[700px]  " src={data.imgSrc} alt='herosectionimage'key={index}/> 

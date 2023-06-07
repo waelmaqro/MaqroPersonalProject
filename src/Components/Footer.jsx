@@ -1,10 +1,10 @@
 'use client'
 import React, {useState} from "react";
 import Link from "next/link";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import { KeyboardArrowUp, KeyboardArrowDown } from "@mui/icons-material";
 
 
@@ -14,9 +14,9 @@ const [isOpen, setIsOpen] = useState(false);
   return (
     <footer className="bg-gray-900 text-white  pt-[100px]">
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto  px-4 2xl:max-w-[1500px] min-[1400px]:max-w-[90%]">
     
-        <div className="grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:flex items-start lg:gap-[100px] lg:justify-center xs:justify-items-center md:justify-between ">
+        <div className="grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:flex lg:justify-between items-start lg:gap-[100px]  xs:justify-items-start md:justify-between w-full">
         <div>
         <img src="/porche.png" className="w-[50px]" alt=""/>
       </div>
@@ -114,14 +114,14 @@ const [isOpen, setIsOpen] = useState(false);
             </div>}
             {isOpen ? <KeyboardArrowUp /> :  <KeyboardArrowDown/> }
           </button>
-          <div className="text-sm text-center  ">
+          <div className="text-md text-center  ">
             &copy; 2023 Porsche Inc. &middot; Privacy Policy &middot; Terms of Service &middot; Sitemap
           </div>
 
-          <div className="flex justify-center space-x-4 mt-4 sm:mt-0">
-            <FacebookIcon />
-            <LinkedInIcon />
-            <YouTubeIcon />
+          <div className="flex justify-center space-x-4 mt-4 sm:mt-0 ">
+            <FacebookRoundedIcon className="text-[30px]" />
+            <LinkedInIcon className="text-[30px]"  />
+            <YouTubeIcon  className="text-[30px]" />
           </div>
         </div>
       </div>

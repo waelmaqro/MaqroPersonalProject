@@ -2,16 +2,27 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Dropdown } from "flowbite-react";
 import CustomMediaQuery from "../app/Queries/CustomMediaQuery";
 import { MenuRounded, CloseRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { KeyboardArrowDown } from "@mui/icons-material";
+import { Dropdown } from "@nextui-org/react";
 
 const Navbar = () => {
   const router = usePathname();
 
-  const routing = useRouter();
+  const ButtonStyle = {
+    borderRadius: "0px",
+    backgroundColor: "transparent",
+    color:"white",
+    opacity: "0.9",
+    fontSize: "18px",
+    fontWeight: "400",
+    lineHeight: "24px",
+    width: "150px",
+    display: "flex",
+    justifyContent: "space-between"
+  }
 
   const hamburgerMenu = CustomMediaQuery("(max-width: 1179px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -61,24 +72,18 @@ const Navbar = () => {
             </Link>
 
             <div className="flex justify-center items-center gap-2 ">
-              <div className="flowbite-dropdown hover:bg-gray-700 rounded-md py-2 px-4 transition duration-300">
-                <Dropdown
-                  label="Features"
-                  inline={true}
-                  placement="bottom"
-                  className=" w-[200px]"
-                >
-                  <Link href="/features#1">
-                    <Dropdown.Item>Feature</Dropdown.Item>
-                  </Link>
-                  <Link href="/features#2">
-                    <Dropdown.Item>Feature</Dropdown.Item>
-                  </Link>
-                  <Link href="/features#3">
-                    <Dropdown.Item>Feature</Dropdown.Item>
-                  </Link>
+           
+                <Dropdown className="hover:bg-gray-700" >
+                  <Dropdown.Button css={ButtonStyle} iconRight={<KeyboardArrowDown className="text-[35px]" />}>Features</Dropdown.Button>
+                  <Dropdown.Menu aria-label="Static Actions">
+                    <Dropdown.Item key="Feature 1">Feature 1</Dropdown.Item>
+                    <Dropdown.Item key="Feature 2">Feature 2</Dropdown.Item>
+                    <Dropdown.Item key="Feature 3">Feature 3</Dropdown.Item>
+          
+             
+                  </Dropdown.Menu>
                 </Dropdown>
-              </div>
+        
               <Link
                 href="/pricing"
                 className={

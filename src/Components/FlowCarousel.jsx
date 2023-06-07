@@ -10,11 +10,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const FlowCarousel = (Slides) => {
   const isSmallScreen = CustomMediaQuery("(max-width: 1019px)");
   return (
-    <div className="xxs:h-[500px] xl:h-[600px] w-screen md:max-w-[90%] min-[1600px]:max-w-[1500px] ">
+    <div className="xxs:h-[500px] xl:h-[700px] w-screen md:max-w-[90%] min-[1600px]:max-w-[1500px] ">
       <Carousel
         slideInterval={5000}
         leftControl={isSmallScreen ? " " : <div className="p-5 bg-gray-700 bg-opacity-60 "><ArrowBackIosNewIcon className="text-white 2xl:text-[30px] md:text-[20px]"/> </div>}
         rightControl={isSmallScreen ? " " : <div className="p-5 bg-gray-700 bg-opacity-60 "><ArrowForwardIosIcon className="text-white 2xl:text-[30px] md:text-[20px]"/> </div>}
+        indicators={false}
       >
         {CarouselData.map((slide, index) => (
           <div

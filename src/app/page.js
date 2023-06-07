@@ -112,7 +112,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             gravida velit vitae commodo fringilla.
           </p>
-          <div className="flex justify-center items-center gap-4 md:flex-row xxs:flex-col  max-w-[1500px] my-1 px-4">
+          <div className="flex justify-center items-center gap-4 md:flex-row xxs:flex-col  2xl:max-w-[1500px] my-1 px-4 lg:max-w-[90%]">
             {BlogData.map((data, index) => (
               <BlogCard
                 key={index}
