@@ -40,24 +40,7 @@ export default function Home() {
 
         {/* Feature Section */}
         <section className="mb-[200px] flex flex-col gap-[100px] justify-center items-center ">
-          {isSmallScreen ? (
-            <Carousel leftControl=" " rightControl=" " className="py-10">
-              <FeatureCard
-                title="Feature"
-                imageUrl="/landingimage.jpg"
-                description=" Experience luxury and performance like never before with Porche
-                iconic lineup of precision-engineered vehicles."
-                flipSwitch={false}
-              />
-              <FeatureCard
-                title="Feature"
-                imageUrl="/landingimage.jpg"
-                description=" Experience luxury and performance like never before with Porche
-                iconic lineup of precision-engineered vehicles."
-                flipSwitch={true}
-              />
-            </Carousel>
-          ) : (
+       
             <>
               <FeatureCard
                 title="Feature"
@@ -74,7 +57,7 @@ export default function Home() {
                 flipSwitch={true}
               />
             </>
-          )}
+
         </section>
 
         {/* Carousel Section */}
